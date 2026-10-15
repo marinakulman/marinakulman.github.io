@@ -1,64 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Kulman — Data &amp; BI Analyst</title>
+<meta name="description" content="Portfolio of Marina Kulman, Data &amp; BI Analyst based in Dublin — Tableau, Power BI and category analysis projects.">
+<style>
+  :root{
+    --ink:#111827;
+    --muted:#5b6472;
+    --line:#e3e7ec;
+    --bg:#f7f8fa;
+    --card:#ffffff;
+    --accent:#1f6feb;
+    --accent-dark:#1550b3;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:64px 20px 80px}
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-    }
+  header{margin-bottom:48px}
+  h1{font-size:34px;line-height:1.2;margin:0 0 6px;letter-spacing:-0.02em}
+  .role{font-size:19px;color:var(--muted);margin:0 0 18px}
+  .intro{font-size:16px;color:var(--muted);margin:0;max-width:60ch}
 
-    main {
-      width: min(520px, calc(100% - 40px));
-      padding: 48px 32px;
-      text-align: center;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px;
+    margin-bottom:20px;
+  }
+  .tools{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 10px;
+  }
+  .card h2{font-size:21px;margin:0 0 10px;letter-spacing:-0.01em}
+  .card p{margin:0 0 18px;color:var(--muted);font-size:15.5px;max-width:62ch}
+  .card p strong{color:var(--ink);font-weight:600}
 
-    h1 {
-      margin: 0 0 32px;
-      color: #1f2937;
-    }
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  a.btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:8px;
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    background:var(--accent);
+    color:#fff;
+    border:1px solid var(--accent);
+  }
+  a.btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+  a.btn.secondary{background:transparent;color:var(--accent);border-color:var(--line)}
+  a.btn.secondary:hover{background:#fff;border-color:var(--accent)}
 
-    .button {
-      display: block;
-      margin: 16px 0;
-      padding: 18px 20px;
-      border-radius: 10px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
+  footer{
+    margin-top:44px;padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:14.5px;color:var(--muted);
+  }
+  footer a{color:var(--accent);text-decoration:none}
+  footer a:hover{text-decoration:underline}
 
-    .button:hover {
-      background: #1d4ed8;
-    }
-  </style>
+  @media (max-width:560px){
+    .wrap{padding:40px 18px 56px}
+    h1{font-size:28px}
+    .card{padding:22px}
+  }
+</style>
 </head>
-
 <body>
+<div class="wrap">
+
+  <header>
+    <h1>Marina Kulman</h1>
+    <p class="role">Data &amp; BI Analyst — Dublin, Ireland</p>
+    <p class="intro">
+      Over a decade of commercial analytics in FMCG — category management, BI reporting and
+      stakeholder-facing analysis. Below are three projects showing how I define metrics,
+      interrogate data and turn the result into decisions.
+    </p>
+  </header>
+
   <main>
-    <h1>Portfolio</h1>
 
-    <a class="button" href="/Portfolio_Marina_Kulman.pdf" target="_blank">
-      Category analysis
-    </a>
+    <article class="card">
+      <p class="tools">Tableau · Python · Cohort analysis</p>
+      <h2>Shannon Energy — Growth, Channel Economics &amp; Retention</h2>
+      <p>
+        Which acquisition channels actually create value once customers who leave are
+        accounted for? <strong>The cheapest channel to acquire from turned out to be one of
+        the most expensive to keep a customer from</strong> — ranking channels on
+        acquisition cost alone points the budget at the worst-performing source in the
+        portfolio. Includes a reproducible data pipeline with 14 asserted control values.
+      </p>
+      <div class="links">
+        <a class="btn" href="https://public.tableau.com/views/ShannonEnergy-GrowthChannelEconomicsRetention/GrowthPerformance" target="_blank" rel="noopener">Open the dashboard</a>
+        <a class="btn secondary" href="https://github.com/marinakulman/shannon-energy-tableau" target="_blank" rel="noopener">Code &amp; methodology</a>
+      </div>
+    </article>
 
-    <a class="button" href="/Project_PowerBI.pdf" target="_blank">
-      Power BI
-    </a>
+    <article class="card">
+      <p class="tools">Power BI · DAX · Data modelling</p>
+      <h2>Shannon Energy — Sales &amp; Retention in Power BI</h2>
+      <p>
+        The same business problem built in Power BI: acquisition performance against plan,
+        channel economics and customer retention, modelled across five fact tables with
+        DAX measures.
+      </p>
+      <div class="links">
+        <a class="btn" href="/Project_PowerBI.pdf" target="_blank" rel="noopener">View the project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <p class="tools">Category management · FMCG · Stakeholder reporting</p>
+      <h2>Category Analysis</h2>
+      <p>
+        A commercial category review presented to stakeholders — market structure,
+        performance drivers and the recommendations that followed from them.
+      </p>
+      <div class="links">
+        <a class="btn" href="/Portfolio_Marina_Kulman.pdf" target="_blank" rel="noopener">View the presentation</a>
+      </div>
+    </article>
+
   </main>
+
+  <footer>
+    <a href="https://github.com/marinakulman">GitHub</a> ·
+    <a href="https://public.tableau.com/app/profile/marina.kulman">Tableau Public</a> ·
+    <a href="https://github.com/marinakulman/Certificates">Certificates</a>
+  </footer>
+
+</div>
 </body>
 </html>
